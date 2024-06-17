@@ -1,0 +1,36 @@
+﻿@model DeleteCustomerViewModel
+@{
+    string[] CntrllrActn = { "Customers", "Index" };
+    ViewBag.CntrllrActn = CntrllrActn;
+}
+
+<h1>Delete Customer</h1>
+
+<form asp-action="Delete" asp-controller="Customers" method="post" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly="readonly">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">სახელი</label>
+        <input type="text" class="form-control" asp-for="Name" readonly="readonly">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">მეილი</label>
+        <input type="email" class="form-control" asp-for="Email" readonly="readonly">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">ტელეფონის ნომერი</label>
+        <input type="text" class="form-control" asp-for="Phone" readonly="readonly">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">მისამართი</label>
+        <input type="text" class="form-control" asp-for="Address" readonly="readonly">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">დაბადების თარიღი</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth" readonly="readonly">
+    </div>
+
+    <button type="submit" class="btn btn-danger">წაშლა</button>
+</form>

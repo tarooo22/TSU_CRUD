@@ -1,0 +1,37 @@
+﻿@model UpdateCustomerViewModel
+@{
+    string[] CntrllrActn = { "Customers", "Index" };
+    ViewBag.CntrllrActn = CntrllrActn;
+}
+
+<h1>Edit Customer</h1>
+
+<form asp-action="Update" asp-controller="Customers" method="post" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly="readonly">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">სახელი</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">მეილი</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">ტელეფონის ნომერი</label>
+        <input type="text" class="form-control" asp-for="Phone">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">მისმართი</label>
+        <input type="text" class="form-control" asp-for="Address">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">დაბადების თარიღი</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth">
+    </div>
+
+    <button type="submit" class="btn btn-primary">განახლება</button>
+
+</form>
